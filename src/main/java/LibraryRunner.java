@@ -67,7 +67,7 @@ public class LibraryRunner {
         Library.bookMap.put(newBook.getTitle(), newBook);
         Library.uniqueGenres.add(genre);
 
-        System.out.println("\n***** Book as been added! *****");
+        System.out.println("\n***** Book has been added! *****");
     }
 
     public static void lookUpBook() {
