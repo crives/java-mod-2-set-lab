@@ -41,16 +41,12 @@ public class LibraryRunner {
                     break;
                 case 2:
                     String str1 = sc.nextLine();
-                    System.out.println(askTitle);
-                    String title = sc.nextLine();
-                    lookUpTitle(title);
+                    lookUpTitle();
                     intro();
                     break;
                 case 3:
                     String str2 = sc.nextLine();
-                    System.out.println(askGenre);
-                    String genre = sc.nextLine().toLowerCase();
-                    lookUpGenre(genre);
+                    lookUpGenre();
                     intro();
                     break;
                 case 4:
@@ -84,14 +80,18 @@ public class LibraryRunner {
         System.out.println("\n***** Book has been added! *****");
     }
 
-    public static void lookUpTitle(String title) {
+    public static void lookUpTitle() {
+        System.out.println(askTitle);
+        String title = sc.nextLine();
         String message = Library.bookMap.containsKey(title) 
             ? foundBookByTitle + Library.bookMap.get(title)
             : didNotFindByTitle;
         System.out.println(message);
    }
 
-    public static void lookUpGenre(String genre) {
+    public static void lookUpGenre() {
+        System.out.println(askGenre);
+        String genre = sc.nextLine().toLowerCase();
         boolean isGenrePresent = Library.uniqueGenres.contains(genre);
         String message1 = Library.bookMap.isEmpty()
             ? noBooks 
