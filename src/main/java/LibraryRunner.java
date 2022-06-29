@@ -94,6 +94,9 @@ public class LibraryRunner {
             System.out.println("\nYes, we do have a book of that genre!\nSee below: \n");
             Library.printBooksWGenres(genre);
             intro();
+        } else {
+            System.out.println("\nSorry, we do not currently have a book of that genre!");
+            intro();
         }
     }
 }
